@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -7,6 +5,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const fontSize30 = TextStyle(fontSize: 30);
     return Scaffold(
       appBar: AppBar(
         title: const Text("HomeScreen"),
@@ -17,10 +16,17 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: const [
-            Text('Número de clicks'),
-            Text('0'),
+            Text('Número de clicks', style: fontSize30),
+            Text('0', style: fontSize30),
           ],
         ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.add),
+        onPressed: () {
+          print("Hola Mundo");
+        },
       ),
     );
   }
