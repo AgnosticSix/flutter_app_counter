@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -10,8 +12,15 @@ class HomeScreen extends StatelessWidget {
         title: const Text("HomeScreen"),
         elevation: 0.0,
       ),
-      body: const Center(
-        child: Text('HomeScreen'),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: const [
+            Text('Número de clicks'),
+            Text('0'),
+          ],
+        ),
       ),
     );
   }
